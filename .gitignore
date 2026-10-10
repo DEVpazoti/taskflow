@@ -1,3 +1,5 @@
-node_modulesw
+node_modules
 
 .env
+
+dist
