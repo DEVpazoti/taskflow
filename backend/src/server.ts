@@ -19,6 +19,12 @@ app.get("/health", (req, res) => {
 });
 // 7. fecha a função e a chamada do app.get
 
+app.get("/ola", (req, res) => {
+  let nome = req.query.nome || "Visitante";       // let, porque o valor pode mudar logo abaixo
+
+  res.status(200).json({ mensagem: `Olá, ${nome}!` });   // uma resposta só
+});
+
 // 8. começa a escutar na porta; quando estiver pronto...
 app.listen(PORT, () => {                  
 // 9. ...mostra a mensagem no terminal
