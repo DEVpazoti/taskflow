@@ -19,14 +19,16 @@ app.get("/health", (req, res) => {
 });
 // 7. fecha a função e a chamada do app.get
 
-app.get("/ola", (req, res) => {
-  const nome = req.query.nome || "Visitante"; 
-
-  res.status(200).json({ mensagem: `Olá, ${nome}!` });  
-});
-
 app.use((req, res) => {
   res.status(404).json({ erro: "Rota não encontrada" });
+});
+
+app.get("/ola", (req, res) => {
+  //const pois o valor não muda
+  const nome = req.query.nome || "Visitante"; 
+
+  //mensagem
+  res.status(200).json({ mensagem: `Olá, ${nome}!` });  
 });
 
 // 8. começa a escutar na porta; quando estiver pronto...
