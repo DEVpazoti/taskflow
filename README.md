@@ -31,6 +31,7 @@ npm run dev
 ```
 
 A API sobe em `http://localhost:3333`.
+Para usar outra porta, defina a variável de ambiente `PORT` (no PowerShell: `$env:PORT=4000; npm run dev`).
 
 ## Rotas disponíveis
 
